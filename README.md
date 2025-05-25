@@ -1,4 +1,4 @@
-# TaskFlow Manager
+# Gerenciador de Tarefas
 
 Sistema para gestão de projetos, tarefas e usuários, com backend em Node.js/Express e frontend em Angular.
 
