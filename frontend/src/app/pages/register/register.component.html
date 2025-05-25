@@ -1,0 +1,16 @@
+<div class="centraliza">
+  <div class="container register-container">
+    <h2>Criar Conta</h2>
+    <form (ngSubmit)="register()">
+      <input type="text" [(ngModel)]="name" name="name" placeholder="Nome" required>
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required>
+      <input type="password" [(ngModel)]="password" name="password" placeholder="Senha" required>
+      <button type="submit">Registrar</button>
+      <div class="success" *ngIf="success">{{ success }}</div>
+      <div class="error" *ngIf="error">{{ error }}</div>
+    </form>
+    <div style="margin-top: 18px;">
+      <a routerLink="/login">Já tem conta? Entrar</a>
+    </div>
+  </div>
+</div>

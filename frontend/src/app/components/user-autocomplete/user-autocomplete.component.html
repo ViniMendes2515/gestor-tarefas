@@ -1,0 +1,14 @@
+<div class="autocomplete-wrapper">
+  <input
+    type="text"
+    [placeholder]="placeholder"
+    [(ngModel)]="search"
+    (input)="onInput()"
+    autocomplete="off"
+  >
+  <ul *ngIf="suggestions.length" class="autocomplete-list">
+    <li *ngFor="let user of suggestions" (click)="selectUser(user)">
+      {{ user.name }} ({{ user.email }})
+    </li>
+  </ul>
+</div>

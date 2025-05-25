@@ -1,0 +1,20 @@
+.project-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #e3e8ee;
+}
+.project-item:last-child {
+  border-bottom: none;
+}
+.error {
+  color: #e74c3c;
+  margin: 12px 0;
+  font-weight: 500;
+}
+
+.centraliza{
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

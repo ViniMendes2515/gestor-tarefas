@@ -1,0 +1,21 @@
+.login-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(60, 80, 120, 0.12);
+}
+.error {
+  color: #e74c3c;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.centraliza{
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

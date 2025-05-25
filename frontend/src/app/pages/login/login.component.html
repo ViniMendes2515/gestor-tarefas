@@ -1,0 +1,14 @@
+<div class="centraliza">
+  <div class="container login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required>
+      <input type="password" [(ngModel)]="password" name="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+      <div class="error" *ngIf="error">{{ error }}</div>
+    </form>
+    <div style="margin-top: 18px;">
+      <a routerLink="/register">Não tem conta? Criar agora</a>
+    </div>
+  </div>
+</div>

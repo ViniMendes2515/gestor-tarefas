@@ -1,0 +1,29 @@
+<div class="dashboard-container">
+  <h2>Bem-vindo, {{ user.name }} <span class="role">({{ role }})</span></h2>
+
+  <div class="dashboard-stats">
+    <div class="stat-card">
+      <h3>Projetos</h3>
+      <p class="stat-number">{{ projects.length }}</p>
+    </div>
+    <div class="stat-card">
+      <h3>Atribuídas</h3>
+      <p class="stat-number">{{ tasks.length }}</p>
+    </div>
+    <div class="stat-card">
+      <h3>Pendentes</h3>
+      <p class="stat-number">{{ tasksPendentes.length }}</p>
+    </div>
+    <div class="stat-card">
+      <h3>Concluídas</h3>
+      <p class="stat-number">{{ tasksConcluidas.length }}</p>
+    </div>
+  </div>
+
+  <div class="dashboard-actions">
+    <a *ngIf="user?.role === 'admin'" routerLink="/users" class="btn">Usuarios</a>
+    <a *ngIf="user?.role === 'admin'" routerLink="/projects" class="btn">Ver Projetos</a>
+    <a routerLink="/tasks" class="btn">Ver Tarefas</a>
+    <button (click)="logout()" class="btn" style="background:#e74c3c;">Sair</button>
+  </div>
+</div>

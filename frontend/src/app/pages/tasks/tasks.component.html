@@ -1,0 +1,45 @@
+<div class="centraliza">
+  <a routerLink="/dashboard" class="btn">Voltar Dashboard</a>
+  <div class="container">
+    <h2>Tarefas</h2>
+    <form class="task-form" (ngSubmit)="createTask()" *ngIf="user?.role === 'admin'">
+      <input [(ngModel)]="newTask.title" name="title" placeholder="Título" required>
+      <input [(ngModel)]="newTask.description" name="description" placeholder="Descrição">
+      <select [(ngModel)]="newTask.project_id" name="project_id" required>
+        <option value="">Selecione o Projeto</option>
+        <option *ngFor="let project of projects" [value]="project.id">{{ project.name }}</option>
+      </select>
+      <app-user-autocomplete
+          [(userId)]="newTask.assigned_to"
+          placeholder="Responsável"
+      ></app-user-autocomplete>
+      <select [(ngModel)]="newTask.status" name="status">
+        <option value="pendente">Pendente</option>
+        <option value="concluída">Concluída</option>
+      </select>
+      <button type="submit" style="margin-bottom: 1rem;">Adicionar Tarefa</button>
+    </form>
+    <div *ngIf="error" class="error">{{ error }}</div>
+
+    <h3>Lista de tarefas</h3>
+    <div *ngIf="tasks.length === 0" class="no-tasks">Nenhuma tarefa atribuida.</div>
+    <ul class="task-list">
+      <li *ngFor="let task of tasks" class="task-item">
+        <strong>{{ task.title }}</strong>
+        <span class="status" [ngClass]="{'pendente': task.status === 'pendente', 'concluida': task.status === 'concluída'}">
+          {{ task.status }}
+        </span>
+        <br>
+        <span class="meta">
+          Projeto: {{ getProjectName(task.project_id) }} |
+          Responsável: {{ getUserName(task.assigned_to) }}
+        </span>
+        <div style="margin-top: 8px;">
+          <button *ngIf="task.status !== 'concluída'" (click)="updateTaskStatus(task, 'concluída')">Marcar como concluída</button>
+          <button *ngIf="task.status !== 'pendente'" (click)="updateTaskStatus(task, 'pendente')">Marcar como pendente</button>
+          <button (click)="deleteTask(task)" style="background:#e74c3c; margin-left:8px;" *ngIf="user?.role === 'admin'">Remover</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

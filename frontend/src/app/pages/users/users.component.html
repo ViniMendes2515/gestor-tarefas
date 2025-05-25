@@ -1,0 +1,36 @@
+<div class="centraliza">
+  <div class="container users-container">
+    <h2>Gerenciar Usuários</h2>
+    <div class="success" *ngIf="success">{{ success }}</div>
+    <div class="error" *ngIf="error">{{ error }}</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Permissão</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.role }}</td>
+          <td class="actions">
+            <button class="icon-btn" *ngIf="user.role !== 'admin'" (click)="setRole(user, 'admin')" title="Tornar Admin">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2a4d69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l4.5-4.5L12 11l4.5-4.5L21 11"/><path d="M5 19h14a2 2 0 0 0 2-2v-7l-7 7-7-7v7a2 2 0 0 0 2 2z"/></svg>
+            </button>
+            <button class="icon-btn" *ngIf="user.role !== 'colaborador'" (click)="setRole(user, 'colaborador')" title="Tornar Colaborador">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2a4d69" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg>
+            </button>
+            <button class="icon-btn delete-btn" (click)="deleteUser(user)" title="Excluir Usuário">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <a routerLink="/dashboard" class="btn" style="margin-top:18px;">Voltar</a>
+  </div>
+</div>

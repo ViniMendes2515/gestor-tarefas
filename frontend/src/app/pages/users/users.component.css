@@ -1,0 +1,75 @@
+.users-container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(60, 80, 120, 0.12);
+}
+.success {
+  color: #27ae60;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.error {
+  color: #e74c3c;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.centraliza{
+  height: 96vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 18px;
+}
+th, td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e3e8ee;
+  text-align: left;
+}
+th {
+  background: #eaf3fb;
+  color: #2a4d69;
+  font-weight: 600;
+}
+tr:last-child td {
+  border-bottom: none;
+}
+button {
+  margin-right: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+.icon-btn:hover {
+  background: #eaf3fb;
+}
+.icon-btn.delete-btn:hover svg {
+  stroke: #fff;
+  background: #e74c3c;
+  border-radius: 50%;
+}
+.icon-btn.delete-btn:hover {
+  background: #e74c3c;
+}
+.icon-btn svg {
+  pointer-events: none;
+}
