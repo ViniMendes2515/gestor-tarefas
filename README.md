@@ -72,4 +72,4 @@ Sistema para gestão de projetos, tarefas e usuários, com backend em Node.js/Ex
 - 
 ---
 
-Feito por Vinicius MEndes
+Feito por Vinicius Mendes
