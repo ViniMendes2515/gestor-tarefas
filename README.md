@@ -63,13 +63,12 @@ Sistema para gestão de projetos, tarefas e usuários, com backend em Node.js/Ex
 ## Tecnologias
 
 - **Backend:** Node.js, Express, SQLite, JWT, bcryptjs
-- **Frontend:** Angular 19, RxJS
+- **Frontend:** Angular 19
 
 ## Observações
 
 - O backend precisa estar rodando antes do frontend.
 - O frontend se comunica com o backend em `http://localhost:3000/`.
-- 
 ---
 
 Feito por Vinicius Mendes
