@@ -54,12 +54,6 @@ Sistema para gestão de projetos, tarefas e usuários, com backend em Node.js/Ex
   Email: `colab@email.com`  
   Senha: `colab123`
 
-## Scripts úteis
-
-- Rodar seed: `node backend/seed.js`
-- Iniciar backend: `node backend/src/presentation/server.js`
-- Iniciar frontend: `npm start` dentro da pasta `frontend`
-
 ## Tecnologias
 
 - **Backend:** Node.js 22.15.1, Express, SQLite, JWT, bcryptjs
