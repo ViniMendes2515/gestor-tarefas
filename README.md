@@ -62,7 +62,7 @@ Sistema para gestão de projetos, tarefas e usuários, com backend em Node.js/Ex
 
 ## Tecnologias
 
-- **Backend:** Node.js 24.1.0, Express, SQLite, JWT, bcryptjs
+- **Backend:** Node.js 22.15.1, Express, SQLite, JWT, bcryptjs
 - **Frontend:** Angular 19
 
 ## Observações
