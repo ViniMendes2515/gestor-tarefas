@@ -25,7 +25,6 @@ db.exec(migrations, (err) => {
             'Segunda tarefa', 'Fazer outra coisa', project.id, null, 'pendente'
           ], () => {
             console.log('Seed completo!');
-            process.exit(0);
           });
         });
       });
