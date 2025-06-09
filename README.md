@@ -47,10 +47,11 @@ Sistema para gestão de projetos, tarefas e usuários, com backend em Node.js/Ex
 
 ## Rodar via Docker
 
+Dentro do diretorio Raiz da aplicacao rode o seguinte comando
+
 ```sh
    docker-compose up --build
 ```
-Dentro do diretorio Raiz da aplicacao
 
 ## Usuários iniciais
 
