@@ -45,6 +45,13 @@ Sistema para gestão de projetos, tarefas e usuários, com backend em Node.js/Ex
    ```
    O frontend estará em `http://localhost:4200/`
 
+## Rodar via Docker
+
+```sh
+   docker-compose up --build
+```
+Dentro do diretorio Raiz da aplicacao
+
 ## Usuários iniciais
 
 - **Admin:**  
